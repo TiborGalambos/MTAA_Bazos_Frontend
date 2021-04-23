@@ -32,7 +32,9 @@ class Items : AppCompatActivity() {
 
         var category_word:String? = ""
 
-        val search_text:String? = intent!!.getStringExtra("search_word")
+        var search_text:String? = ""
+
+        search_text = intent.getStringExtra("search_word")
         category_word = intent!!.getStringExtra("category_word")
 
         apiClient = APIclient()
@@ -40,7 +42,7 @@ class Items : AppCompatActivity() {
 
         if(search_text == "") {
 
-            Log.d("NOT SEARCHING BY TEXT: ", "this is the text: " + search_text)
+            Log.d("1 ALL ITEMS: ", "this is the text: " + search_text)
             apiClient.getApiService(this).showAllItems(token = "Token ${sessionManager.fetchAuthToken()}").enqueue(object : Callback<ItemList> {
                 override fun onFailure(call: Call<ItemList>, t: Throwable) {
                     //println("[HomeFragment] FAILURE. Is the server running? " + t.stackTrace)
@@ -98,7 +100,7 @@ class Items : AppCompatActivity() {
                 }
             })
         }
-        else if(category_word != "" && search_text == "")
+        else if(category_word != "" && search_text == null)
         {
             val text = "\"" + category_word + "\""
             val body: RequestBody = create("text/plain".toMediaTypeOrNull(), text!!)
@@ -162,12 +164,14 @@ class Items : AppCompatActivity() {
                 }
             })
         }
-        else
+        else if(search_text != null)
         {
+            Log.d("3 SEARCHING BY TEXT: ", "this is the text: " + search_text)
+            Log.d("3 NOT SEARCH BY CAT: ", "this is the text: " + category_word)
             val text = search_text
             val body: RequestBody = create("text/plain".toMediaTypeOrNull(), text!!)
 
-            Log.d("SEARCHING BY TEXT: ", "this is the text: " + search_text)
+
             apiClient.getApiService(this).searchThisItemByKeyword(token = "Token ${sessionManager.fetchAuthToken()}", body).enqueue(object : Callback<ItemList> {
                 override fun onFailure(call: Call<ItemList>, t: Throwable) {
                     //println("[HomeFragment] FAILURE. Is the server running? " + t.stackTrace)
