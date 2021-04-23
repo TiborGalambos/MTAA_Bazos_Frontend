@@ -85,6 +85,12 @@ class EditItem : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            if (content.length < 30) {
+                content_text.error = "Content too short (min 30 chars)"
+                content_text.requestFocus()
+                return@setOnClickListener
+            }
+
             if (address.isEmpty()) {
                 address_text.error = "Address required"
                 address_text.requestFocus()
