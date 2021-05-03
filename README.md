@@ -12,7 +12,7 @@ Backend for this app is available [HERE](https://github.com/TiborGalambos/MTAA_B
 ![login](screenshots/items?raw=true "Items")
 
 # Edit one of my items screen
-![login](screenshots/editordelete "Edit or Delete")
+![login](https://github.com/TiborGalambos/MTAA_Bazos_Frontend/blob/main/screenshots/edititem.png "Edit or Delete")
 
 # Edit screen
 ![login](screenshots/edititem?raw=true "Edit")
