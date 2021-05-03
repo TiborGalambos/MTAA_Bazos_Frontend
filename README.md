@@ -3,19 +3,19 @@
 Backend for this app is available [HERE](https://github.com/TiborGalambos/MTAA_Bazos_xbopko_xgalambos)
 
 # Login screen
-![login](screenshots/login?raw=true "Login")
+![login](https://github.com/TiborGalambos/MTAA_Bazos_Frontend/blob/main/screenshots/login.png "Login")
 
 # Home screen
-![login](screenshots/home?raw=true "Home")
+![login](https://github.com/TiborGalambos/MTAA_Bazos_Frontend/blob/main/screenshots/home.png "Home")
 
 # My items screen
-![login](screenshots/items?raw=true "Items")
+![login](https://github.com/TiborGalambos/MTAA_Bazos_Frontend/blob/main/screenshots/items.png "Items")
 
 # Edit one of my items screen
-![login](https://github.com/TiborGalambos/MTAA_Bazos_Frontend/blob/main/screenshots/edititem.png "Edit or Delete")
+![login](https://github.com/TiborGalambos/MTAA_Bazos_Frontend/blob/main/screenshots/editordelete.png "Edit or Delete")
 
 # Edit screen
-![login](screenshots/edititem?raw=true "Edit")
+![login](https://github.com/TiborGalambos/MTAA_Bazos_Frontend/blob/main/screenshots/edititem.png "Edit")
 
 # Creating New Item
-![login](screenshots/newitem?raw=true "New Item")
+![login](https://github.com/TiborGalambos/MTAA_Bazos_Frontend/blob/main/screenshots/newitem.png "New Item")
